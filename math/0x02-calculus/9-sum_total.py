@@ -8,6 +8,3 @@ def summation_i_squared(n):
         x=range(1,(n+1))
         x=np.power(x,2)
         return sum(x)
-
-n=5
-print(summation_i_squared(n))
