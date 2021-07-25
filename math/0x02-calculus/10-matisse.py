@@ -1,11 +1,13 @@
-
 #!/usr/bin/env python3
 """
-Juego de polinomios con numpy
+ Deriva de polinomios
 """
-import numpy as np
 
-def poly_derivate(poly):
-    poly.reverse()
-    p=np.poly1d(poly)
-    return(np.polyder(p).c)
+
+def poly_derivative(poly):
+    i = 0
+    for n in poly:
+        poly[i] = i * n
+        i = 1 + i
+    poly.pop(0)
+    return poly
