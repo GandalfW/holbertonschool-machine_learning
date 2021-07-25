@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-import numpy as np
 
 def summation_i_squared(n):
     if(not isinstance(n,int)):
-        return None
+        result=None
+    elif n==1:
+        result=1
     else:
-        x=range(1,(n+1))
-        x=np.power(x,2)
-        return sum(x)
+        result=(pow(n,2)+summation_i_squared(n-1))
+    return result
