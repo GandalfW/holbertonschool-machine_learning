@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+"""
+Función para calcular suma cuadrática
+"""
 
 
 def summation_i_squared(n):
