@@ -16,13 +16,13 @@ class Poisson:
         '''
         if data is None:
             if lambtha <= 0:
-                ValueError("Lambtha must be a positive value")
+                raise ValueError("Lambtha must be a positive value")
             else:
                 self.lambtha = float(lambtha)
         else:
             if not isinstance(data, list):
-                ValueError("Data must be a list")
+                raise ValueError("Data must be a list")
             elif (len(data) < 2):
-                ValueError("Data must contain multiple values")
+                raise ValueError("Data must contain multiple values")
             else:
                 self.lambtha = sum(data) / len(data)
