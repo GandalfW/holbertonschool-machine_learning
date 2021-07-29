@@ -47,3 +47,22 @@ class Poisson:
         r = (e**(-self.lambtha))*(self.lambtha**k)
         r = r/f
         return r
+
+    def cdf(self, k):
+        '''
+        Function CDF
+        '''
+        e = 2.7182818285
+        if k > 0:
+            if not isinstance(k, int):
+                k = int(k)
+        else:
+            return 0
+        f = [1]
+        i = 0
+        for j in range(1, k+1):
+            f.append(f[j-1] * j)
+        for n in f:
+            f[i] = (self.lambtha ** i) / f[i]
+            i = i + 1
+        return (e ** (-self.lambtha)) * sum(f)
