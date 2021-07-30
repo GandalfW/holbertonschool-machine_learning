@@ -3,11 +3,12 @@
 Exponential Class
 '''
 
+
 class Exponential:
     '''
     Exponential Distribution
     '''
-    def __init__(self, data = None, lambtha = 1.):
+    def __init__(self, data=None, lambtha=1.):
         '''
         Constructor
         '''
