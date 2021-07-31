@@ -2,6 +2,8 @@
 '''
 Normal Distribution
 '''
+
+
 class Normal:
     def __init__(self, data=None, mean=0., stddev=1.):
         '''
@@ -19,4 +21,6 @@ class Normal:
             raise ValueError("data must contain multiple values")
         else:
             self.mean = sum(data) / len(data)
-            self.stddev = ((sum([(data[j] - self.mean) ** 2 for j in range(len(data))])) / len(data)) ** 0.5
+            self.stddev = ((sum([(data[j] - self.mean) ** 2
+                                 for j in range(len(data))])) /
+                           len(data)) ** 0.5
